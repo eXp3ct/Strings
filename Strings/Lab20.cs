@@ -15,8 +15,12 @@ namespace Strings
             _n1 = Convert.ToInt32(Console.ReadLine());
             if (_n1 <= 0) // Если число меньше нуля, то кидаем ошибку инвалидной операции
                 throw new InvalidOperationException();
+            if(_n1 > _s1.Length)
+                throw new InvalidOperationException("N1 greater than S1 length");
             _s2 = Console.ReadLine();
             _n2 = Convert.ToInt32(Console.ReadLine());
+            if (_n2 > _s2.Length)
+                throw new InvalidOperationException("N2 greater than S2 length");
             if (_n2 <= 0)
                 throw new InvalidOperationException();
 
